@@ -1,0 +1,39 @@
+model = "parts/capsule/capsule.glb"
+
+name = "capsule_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "capsule_description"
+categories = ["command"]
+allow_radial = true 
+allow_stack = true 
+
+[p_root]
+	mass = 400.0
+
+	[[p_root.attachment]]
+		radial = false 
+		stack = true
+		marker = "m_attach_bottom"
+		size = 1.0
+		name = "core:bottom_attachment"
+		
+	[[p_root.attachment]]
+		radial = false
+		stack = true
+		marker = "m_attach_top"
+		size = 0.5
+		name = "core:top_attachment"
+
+[[machine]]
+	id = "capsule"
+	script = "core:machines/capsule/capsule.lua"
+#[[machine]]
+#	id = "capsule2"
+#	script = "core:machines/capsule.lua"	
+#[[machine]]
+#	id = "capsule3"
+#	script = "core:machines/capsule.lua"	
+#[[machine]]
+#	id = "capsule4"
+#	script = "core:machines/capsule.lua"	

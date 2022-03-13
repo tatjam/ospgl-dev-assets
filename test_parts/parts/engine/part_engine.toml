@@ -1,0 +1,51 @@
+model = "parts/engine/engine_better.glb"
+
+name = "engine_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "engine_description"
+
+categories = ["engines"]
+
+[p_root]
+	mass = 400.0
+
+	[[p_root.attachment]]
+		radial = true
+		stack = true
+		marker = "m_attach_top"
+		size = 1.0
+		name = "top_attachment"
+
+[[machine]]
+	id = "engine"
+	script = "core:machines/engine/machine.lua"
+
+	volume = 10.0
+	max_pressure = 33_000_000
+
+	inlets = ["m_nozzle", "m_nozzle"]
+
+	__editor_marker = "m_nozzle"
+
+# Default piping, unchangeable
+[[pipe]]
+	fmachine = "valve_a"
+	fport = "outlet"
+	tmachine = "combustion_chamber"
+	tport = "inlet_a"
+	radius = 0.05
+
+[[pipe]]
+	fmachine = "valve_b"
+	fport = "outlet"
+	tmachine = "combustion_chamber"
+	tport = "inlet_b"
+	radius = 0.05
+
+[[pipe]]
+	fmachine = "combustion_chamber"
+	fport = "outlet"
+	tmachine = "nozzle"
+	tport = "inlet"
+	radius = "instant"
