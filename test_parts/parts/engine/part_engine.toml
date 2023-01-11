@@ -1,0 +1,41 @@
+model = "parts/engine/engine_better.glb"
+
+name = "engine_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "engine_description"
+
+categories = ["engines"]
+
+[p_root]
+	mass = 400.0
+
+	[[p_root.attachment]]
+		radial = true
+		stack = true
+		marker = "m_attach_top"
+		size = 1.0
+		name = "top_attachment"
+
+[[machine]]
+	id = "engine"
+	script = "core:machines/engine/machine.lua"
+
+	# Data from Raptor 1 vacuum
+	# Assuming fuel mixture of 2.55 times methane to oxygen
+	# We expect:
+	#	Chamber pressure: ~300atm
+	# 	650kg/s consumption
+	#  	Thrust: 2300kN 
+	#   (Area relation is 135.6 so exhaust mach ~= 5)
+	chamber_volume = 0.2424
+	throat_radius = 0.2653
+	exit_radius = 2.74
+	max_pressure = 38_000_000
+	nozzle_marker = "m_nozzle"
+	nozzle_piece = "p_root"
+
+	inlets = ["m_nozzle", "m_nozzle"]
+
+	__editor_marker = "m_nozzle"
+

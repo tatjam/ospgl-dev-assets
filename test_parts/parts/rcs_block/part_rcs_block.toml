@@ -1,0 +1,210 @@
+model = "parts/rcs_block/rcs_block.glb"
+
+name = "rcs_block_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "rcs_block_name"
+
+categories = ["control"]
+
+[p_root]
+	mass = 600.0
+
+	[[p_root.attachment]]
+	radial = true
+	stack = true
+	marker = "m_attach_top"
+	size = 1.0
+	name = "top_attachment"
+
+	[[p_root.attachment]]
+	radial = true
+	stack = true
+	marker = "m_attach_bottom"
+	size = 1.0
+	name = "bottom_attachment"
+
+# Every rcs block is an engine, those engines are optionally controlled through the RCS controller
+
+[[machine]]
+	id = "rcs_controller"
+	script = "core:machines/rcs_controller.lua"
+	engines =  [
+		"rcs_1px", "rcs_2px", "rcs_3px",
+		"rcs_0py", "rcs_1py", "rcs_2py",
+		"rcs_0pz", "rcs_1pz", "rcs_2pz", "rcs_3pz",
+		"rcs_0nx", "rcs_2nx", "rcs_3nx",
+		"rcs_0ny", "rcs_1ny", "rcs_3ny",
+		"rcs_0nz", "rcs_1nz", "rcs_2nz", "rcs_3nz"]
+
+
+# Block 0
+[[machine]]
+	id = "rcs_0nx"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_0nx"
+	__editor_marker = "m_0nx"
+
+[[machine]]
+	id = "rcs_0ny"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_0ny"
+	__editor_marker = "m_0ny"
+
+[[machine]]
+	id = "rcs_0nz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_0nz"
+	__editor_marker = "m_0nz"
+
+[[machine]]
+	id = "rcs_0py"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_0py"
+	__editor_marker = "m_0py"
+
+[[machine]]
+	id = "rcs_0pz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_0pz"
+	__editor_marker = "m_0pz"
+
+
+# Block 1
+
+[[machine]]
+	id = "rcs_1ny"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_1ny"
+	__editor_marker = "m_1ny"
+
+[[machine]]
+	id = "rcs_1nz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_1nz"
+	__editor_marker = "m_1nz"
+
+[[machine]]
+	id = "rcs_1px"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_1px"
+	__editor_marker = "m_1px"
+
+[[machine]]
+	id = "rcs_1py"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_1py"
+	__editor_marker = "m_1py"
+
+[[machine]]
+	id = "rcs_1pz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_1pz"
+	__editor_marker = "m_1pz"
+
+# Block 2
+
+
+[[machine]]
+	id = "rcs_2nx"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_2nx"
+	__editor_marker = "m_2nx"
+
+[[machine]]
+	id = "rcs_2nz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_2nz"
+	__editor_marker = "m_2nz"
+
+[[machine]]
+	id = "rcs_2px"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_2px"
+	__editor_marker = "m_2px"
+
+[[machine]]
+	id = "rcs_2py"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_2py"
+	__editor_marker = "m_2py"
+
+[[machine]]
+	id = "rcs_2pz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_2pz"
+	__editor_marker = "m_2pz"
+
+# Block 3
+
+
+[[machine]]
+	id = "rcs_3nx"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_3nx"
+	__editor_marker = "m_3nx"
+
+[[machine]]
+	id = "rcs_3ny"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_3ny"
+	__editor_marker = "m_3ny"
+
+[[machine]]
+	id = "rcs_3nz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_3nz"
+	__editor_marker = "m_3nz"
+
+[[machine]]
+	id = "rcs_3px"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_3px"
+	__editor_marker = "m_3px"
+
+[[machine]]
+	id = "rcs_3pz"
+	script = "core:machines/engine.lua"
+	thrust = 100.0
+	__editor_hidden = true
+	nozzle = "m_3pz"
+	__editor_marker = "m_3pz"
+

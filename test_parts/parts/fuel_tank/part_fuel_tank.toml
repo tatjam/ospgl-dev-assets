@@ -1,0 +1,71 @@
+model = "parts/fuel_tank/fuel_tank.glb"
+
+name = "fuel_tank_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "fuel_tank_description"
+
+categories = ["fuel_tanks", "containers"]
+
+[p_root]
+	mass = 180.0
+	
+	[[p_root.attachment]]
+		radial = true 
+		stack = true 	
+		marker = "m_attach_top"
+		size = 1.0
+		name = "top_attachment"
+
+	[[p_root.attachment]]
+		radial = true
+		stack = true
+		marker = "m_attach_bottom"
+		size = 1.0
+		name = "bottom_attachment"
+
+	[[p_root.attachment]]
+		radial = true
+		stack = false
+		marker = "m_attach_radial"
+		size = 1.0
+		name = "radial_only_attachment"
+
+
+[[machine]]
+	id = "fuel_tank"
+	script = "core:machines/fuel_tank/machine.lua"
+	volume = 100
+	wall_mass = 70.0
+	temperature = 100.0
+	port_marker = "m_attach_bottom"
+
+	[[machine.content]]
+		material = "core:materials/methane.toml"
+		liquid_mass = 10000.0
+		gas_mass = 0.0
+
+
+[machine.fluid_offset]
+		x = 0
+		y = 0
+
+
+[[machine]]
+	id = "oxidizer_tank"
+	script = "core:machines/fuel_tank/machine.lua"
+	volume = 100
+	wall_mass = 70.0
+	temperature = 100.0
+	port_marker = "m_attach_bottom"
+
+	[[machine.content]]
+		material = "core:materials/oxygen.toml"
+		liquid_mass = 40000.0
+		gas_mass = 0.0
+
+
+[machine.fluid_offset]
+		x = 6
+		y = 0
+

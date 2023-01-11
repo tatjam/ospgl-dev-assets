@@ -1,0 +1,43 @@
+model = "parts/decoupler/decoupler.glb"
+
+name = "decoupler_name"
+country = "core:united_states"
+manufacturer = "rocket_factory"
+description = "decoupler_description"
+categories = ["command"]
+allow_radial = false 
+allow_stack = true 
+
+[p_root]
+	mass = 50.0
+		
+	[[p_root.attachment]]
+		radial = false
+		stack = true
+		marker = "m_attach_top"
+		size = 1.0
+		name = "core:top_attachment"
+	[[p_root.attachment]]
+		hidden = true
+		marker = "m_decoupling_point"
+
+[p_decoupled]
+	mass = 50.0
+	[[p_decoupled.attachment]]
+		radial = false 
+		stack = true
+		marker = "m_attach_bottom"
+		size = 1.0
+		name = "core:decoupled_attachment"
+
+	[p_decoupled.link]
+		attached_to = "p_root"
+		# We use an attachment so the decoupler knows what to decouple
+		to_attachment = "m_decoupling_point"
+		welded = true
+
+[[machine]]
+	id = "decoupler"
+	script = "core:machines/decoupler/decoupler.lua"
+	force = 5000.0
+	decoupling_point = "m_decoupling_point"
