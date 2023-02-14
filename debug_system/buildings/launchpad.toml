@@ -1,7 +1,7 @@
 model = "buildings/launchpad.glb"
 
-[launchpad]
-	subname = "Launchpad"
+[[launchpad]]
+	id = "main"
 	bounds = "m_vehicle_bounds"
 	type = "rocket"
 

@@ -1,21 +1,21 @@
 local glm = require("glm")
 local assets = require("assets")
-local noiseg = require("noise")
+local noise = require("noise")
 
-local ngen = noiseg.new(1234);
+local ngen = noise.new(1234);
+noise.set_crater_chance(ngen, 0.8)
+noise.set_crater_layers(ngen, 8)
 
 function generate(tile, out)
-
 	for i = 1, #tile do
 		local info = tile[i]
 
-		local noisyness = ngen:get_perlin((info.coord_3d * 10.0):unpack())
-		local noise0 = ngen:get_perlin_fractal((info.coord_3d * 1000.0):unpack())
+		local crater = 0.0
+		local coord = info.coord_3d * 800.0
+		local val = noise.crater3(ngen, false, coord:unpack())
+		crater = crater + val
 
-
-		out[i].height = noise0 * 5000.0 * glm.abs(noisyness);
-		out[i].color = glm.vec3.new(0.3, 0.3, 0.3);
+		out[i].height = crater * 5000.0
+		out[i].color = glm.mix(glm.vec3.new(1.0, 1.0, 1.0), glm.vec3.new(0.0, 0.0, 0.0), 1.0 - crater)
 	end
-
 end
-
