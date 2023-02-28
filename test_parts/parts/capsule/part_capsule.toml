@@ -26,8 +26,8 @@ allow_stack = true
 		name = "core:top_attachment"
 
 [[machine]]
-	id = "capsule"
-	script = "core:machines/capsule/capsule.lua"
+	__id = "capsule"
+	__script = "core:machines/capsule/capsule.lua"
 #[[machine]]
 #	id = "capsule2"
 #	script = "core:machines/capsule.lua"	

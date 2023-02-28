@@ -18,8 +18,9 @@ categories = ["engines"]
 		name = "top_attachment"
 
 [[machine]]
-	id = "engine"
-	script = "core:machines/engine/machine.lua"
+	__id = "engine"
+	__script = "core:machines/engine/machine.lua"
+	__editor_marker = "m_nozzle"
 
 	# Data from Raptor 1 vacuum
 	# Assuming fuel mixture of 2.55 times methane to oxygen
@@ -37,5 +38,4 @@ categories = ["engines"]
 
 	inlets = ["m_nozzle", "m_nozzle"]
 
-	__editor_marker = "m_nozzle"
 

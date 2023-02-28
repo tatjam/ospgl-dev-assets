@@ -37,7 +37,7 @@ allow_stack = true
 		welded = true
 
 [[machine]]
-	id = "decoupler"
-	script = "core:machines/decoupler/decoupler.lua"
+	__id = "decoupler"
+	__script = "core:machines/decoupler/decoupler.lua"
 	force = 5000.0
 	decoupling_point = "m_decoupling_point"

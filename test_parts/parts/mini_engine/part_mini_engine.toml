@@ -12,7 +12,7 @@ categories = ["engines"]
 
 
 [[machine]]
-	id = "main_engine"
-	script = "core:machines/engine.lua"
+	__id = "main_engine"
+	__script = "core:machines/engine.lua"
 	thrust = 10.0
 	nozzle = "m_nozzle"

@@ -6,7 +6,7 @@ local locale =
 -- Manufacturers
 {"rocket_factory", "Rocket Factory", "Rocket Factory"},
 -- Parts
-{"capsule_name", "TC1", "TC1"},
+{"capsule_name", "Comfy Room Mk. 1", "Sala cómoda Mk. 1"},
 {"capsule_description",
     "Allows a single crew member to enjoy space",
     "Permite a una sola persona disfrutar del espacio exterior"},
