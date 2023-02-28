@@ -46,9 +46,9 @@ categories = ["fuel_tanks", "containers"]
 		gas_mass = 0.0
 
 
-[machine.fluid_offset]
-		x = 0
-		y = 0
+	[machine.__fluid_offset]
+			x = 0
+			y = 0
 
 
 [[machine]]
@@ -65,7 +65,7 @@ categories = ["fuel_tanks", "containers"]
 		gas_mass = 0.0
 
 
-[machine.fluid_offset]
-		x = 6
-		y = 0
+	[machine.__fluid_offset]
+			x = 6
+			y = 0
 
